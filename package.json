@@ -13,9 +13,7 @@
     "fastify-mongodb": "^2.0.0",
     "mongoose": "^5.9.21"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
