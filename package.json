@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node dist/server.js",
     "build": "npm run start"
   },
   "keywords": [],
