@@ -10,7 +10,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-const db = require('./dist/models/config/keys').mongoURI;
+const db = require('./config/keys').mongoURI;
 
 mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => console.log('MongoDB Connected...'))
