@@ -3,14 +3,14 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
-const items = require('./routes/api/inputs');
+const items = require('./dist/models/api/inputs');
 
 
 const app = express();
 
 app.use(bodyParser.json());
 
-const db = require('./config/keys').mongoURI;
+const db = require('./dist/models/config/keys').mongoURI;
 
 mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => console.log('MongoDB Connected...'))
