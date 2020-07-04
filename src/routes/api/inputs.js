@@ -1,17 +1,17 @@
 const express = require('express')
 const router = express.Router();
 const {mongoose, schema} = require('mongoose');
-
+var cors = require('cors')
 const Item = require('../../models/input');
 
 
-router.get('/', (req, res) => {
+router.get('/', cors(), (req, res) => {
     Item.find()
         .sort({ date: -1 })
         .then(items => res.json(items))
 });
 
-router.post('/', async (req, res) => {
+router.post('/', cors(), async (req, res) => {
     const name = req.body.name;
     const maybeResult = await Item.findOne({ name });
 
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
     return res.json(dataset)
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', cors(), async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
