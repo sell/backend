@@ -18,6 +18,10 @@ mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true })
 
 app.use('/api/inputs', items)
 
+app.use(function(req, res, next) {
+    res.status(404).send('not found buddy')
+})
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server Started on port ${port}`))
