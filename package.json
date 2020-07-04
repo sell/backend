@@ -18,7 +18,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "build": "npm run build"
+    "build": "npm run start"
   },
   "keywords": [],
   "author": "",
