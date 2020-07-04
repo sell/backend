@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
-const items = require('./models/api/inputs');
+const items = require('./models/routes/api/inputs');
 
 
 const app = express();
