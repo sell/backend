@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const {mongoose, schema} = require('mongoose');
 
-const Item = require('../input');
+const Item = require('../../models/input');
 
 
 router.get('/', (req, res) => {
