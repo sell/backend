@@ -16,7 +16,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "node dist/server.js",
-    "build": "npm run start"
+    "build": "cp src dist"
   },
   "keywords": [],
   "author": "",
