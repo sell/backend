@@ -4,6 +4,7 @@ const {mongoose, schema} = require('mongoose');
 var cors = require('cors')
 const Item = require('../../models/input');
 
+app.use(cors());
 
 router.get('/', cors(), (req, res) => {
     Item.find()
